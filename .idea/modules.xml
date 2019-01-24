@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Algorithm-Primary/Algorithm-Primary.iml" filepath="$PROJECT_DIR$/Algorithm-Primary/Algorithm-Primary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringProgramming/SpringProgramming.iml" filepath="$PROJECT_DIR$/SpringProgramming/SpringProgramming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringProgramming/spring-affair/spring-affair.iml" filepath="$PROJECT_DIR$/SpringProgramming/spring-affair/spring-affair.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springBoot/springBoot.iml" filepath="$PROJECT_DIR$/springBoot/springBoot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringProgramming/springaffair.iml" filepath="$PROJECT_DIR$/SpringProgramming/springaffair.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study.iml" filepath="$PROJECT_DIR$/study.iml" />
+    </modules>
+  </component>
+</project>
