@@ -5,6 +5,10 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/springBoot/pom.xml" />
+        <option value="$PROJECT_DIR$/eurake-service/pom.xml" />
+        <option value="$PROJECT_DIR$/sercice-order/pom.xml" />
+        <option value="$PROJECT_DIR$/service-member/pom.xml" />
+        <option value="$PROJECT_DIR$/service-zuul/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
