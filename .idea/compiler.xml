@@ -6,16 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="demo" />
+        <module name="service-zuul" />
         <module name="eurake-service" />
         <module name="sercice-order" />
-        <module name="service-member" />
-        <module name="service-zuul" />
-        <module name="spring-affair" />
         <module name="SpringAffair" />
+        <module name="spring-affair" />
+        <module name="service-member" />
         <module name="springBoot" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="demo" target="1.8" />
       <module name="eurake-service" target="1.8" />
       <module name="sercice-order" target="1.8" />
       <module name="service-member" target="1.8" />
@@ -27,5 +29,10 @@
       <module name="SpringProgramming" target="1.5" />
       <module name="study" target="1.5" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo" options="-parameters" />
+    </option>
   </component>
 </project>

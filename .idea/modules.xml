@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Algorithm-Primary/Algorithm-Primary.iml" filepath="$PROJECT_DIR$/Algorithm-Primary/Algorithm-Primary.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringProgramming/SpringProgramming.iml" filepath="$PROJECT_DIR$/SpringProgramming/SpringProgramming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springBoot/demo.iml" filepath="$PROJECT_DIR$/springBoot/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/eurake-service/eurake-service.iml" filepath="$PROJECT_DIR$/eurake-service/eurake-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/sercice-order/sercice-order.iml" filepath="$PROJECT_DIR$/sercice-order/sercice-order.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-member/service-member.iml" filepath="$PROJECT_DIR$/service-member/service-member.iml" />

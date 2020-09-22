@@ -2,9 +2,14 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/eurake-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eurake-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sercice-order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sercice-order/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-member" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-member/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-zuul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-zuul/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springBoot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springBoot/src/main/java" charset="UTF-8" />
   </component>
 </project>
