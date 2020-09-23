@@ -6,14 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo" />
-        <module name="service-zuul" />
         <module name="eurake-service" />
-        <module name="sercice-order" />
-        <module name="SpringAffair" />
-        <module name="spring-affair" />
-        <module name="service-member" />
         <module name="springBoot" />
+        <module name="SpringAffair" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
