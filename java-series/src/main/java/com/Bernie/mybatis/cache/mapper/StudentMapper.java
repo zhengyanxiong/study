@@ -1,6 +1,6 @@
-package com.Bernie.mapper;
+package com.Bernie.mybatis.cache.mapper;
 
-import com.Bernie.entry.StudentEntity;
+import com.Bernie.mybatis.cache.entry.StudentEntity;
 
 /**
  * create by: Bernie

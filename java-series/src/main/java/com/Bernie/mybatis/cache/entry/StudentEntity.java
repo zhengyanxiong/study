@@ -1,4 +1,4 @@
-package com.Bernie.entry;
+package com.Bernie.mybatis.cache.entry;
 
 import java.io.Serializable;
 

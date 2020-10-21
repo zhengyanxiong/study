@@ -1,6 +1,6 @@
-package com.Bernie;
+package com.Bernie.mybatis.cache;
 
-import com.Bernie.mapper.StudentMapper;
+import com.Bernie.mybatis.cache.mapper.StudentMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

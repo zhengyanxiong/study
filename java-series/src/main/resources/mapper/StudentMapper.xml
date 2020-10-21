@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.Bernie.mapper.StudentMapper">
-    <select id="getStudentById" parameterType="int" resultType="com.Bernie.entry.StudentEntity">
+<mapper namespace="com.Bernie.mybatis.cache.mapper.StudentMapper">
+    <select id="getStudentById" parameterType="int" resultType="com.Bernie.mybatis.cache.entry.StudentEntity">
         SELECT id,name,age FROM student WHERE id = #{id}
     </select>
 
