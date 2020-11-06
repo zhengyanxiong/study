@@ -1,5 +1,7 @@
 package com.Bernie.Interview;
 
+import java.util.Scanner;
+
 /**
  * @CssName DetermineWhetherTheStringIsUnique
  * @Description TODO
@@ -25,8 +27,34 @@ public class DetermineWhetherTheStringIsUnique {
         return true;
     }
 
-    public static void main(String args[]) {
-        String s = "abbc";
-        System.out.println(new DetermineWhetherTheStringIsUnique().isUnique(s));
+    public static void main(String[] args) {
+        int emptyBottleNum = -1;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("=====================");
+        while(emptyBottleNum != 0) {
+            System.out.print("请输入空瓶子数：");
+            emptyBottleNum = sc.nextInt();
+            if(emptyBottleNum == 0) break;
+            System.out.println("最多得到的汽水：" + getBottle(emptyBottleNum));
+            System.out.println("=====================");
+        }
+
+    }
+
+    public static int getBottle(int emptyBottleNum) {
+        int bootleCount = 0;
+        if(emptyBottleNum == 2) bootleCount = 1;
+        while( (emptyBottleNum + 1) > 3) {
+            int temZ = emptyBottleNum / 3;
+            int temY = emptyBottleNum % 3;
+            emptyBottleNum = temZ + temY;
+            bootleCount += temZ;
+            if(emptyBottleNum + 1 == 3) {
+                bootleCount++;
+                break;
+            }
+        }
+
+        return bootleCount;
     }
 }
