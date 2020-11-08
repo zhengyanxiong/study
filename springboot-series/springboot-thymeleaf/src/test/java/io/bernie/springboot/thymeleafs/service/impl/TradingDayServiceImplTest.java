@@ -33,7 +33,7 @@ public class TradingDayServiceImplTest {
 
     @Test
     public void queryNextTradingDay() {
-        LocalDate localDate = LocalDate.parse("2020-11-05");
+        LocalDate localDate = LocalDate.parse("2020-11-07");
         Optional<LocalDate> result = tradingDayService.queryNextTradingDay(localDate);
         System.out.println(result.map(date -> localDate.toString() + "的下一个交易日:" + date.toString()).orElse("不存在"));
     }

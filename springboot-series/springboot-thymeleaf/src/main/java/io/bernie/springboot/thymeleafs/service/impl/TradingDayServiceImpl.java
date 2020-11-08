@@ -12,7 +12,7 @@ import java.util.Optional;
 /**
  * create by: Bernie
  * description: TODO
- * create time: 2020/11/5 21:56
+ * create time: 2020/11/6 21:56
  */
 @Service
 public class TradingDayServiceImpl implements TradingDayService {
@@ -32,12 +32,9 @@ public class TradingDayServiceImpl implements TradingDayService {
 
     @Override
     public Optional<LocalDate> queryNextTradingDay(LocalDate date) {
-        for (String s : tradingDayList) {
-            if (date.equals(LocalDate.parse(s))) {
-                return Optional.of(LocalDate.parse(tradingDayList.get(tradingDayList.indexOf(s) + 1)));
-            }
-        }
-        return Optional.empty();
+
+        Optional<String> temp = tradingDayList.stream().filter(s -> date.compareTo(LocalDate.parse(s)) <0).findFirst();
+        return temp.map(LocalDate::parse);
     }
 
     @Override
@@ -45,7 +42,7 @@ public class TradingDayServiceImpl implements TradingDayService {
         List<LocalDate> result = new ArrayList<>();
         if (from.compareTo(to)>0) return result;
 
-        int leftIndex = 0, rightIndex = tradingDayList.size() - 1;
+        int leftIndex = 0;
 
         while (leftIndex <= tradingDayList.size() - 1) {
             if (from.compareTo(LocalDate.parse(tradingDayList.get(leftIndex))) <= 0 && to.compareTo(LocalDate.parse(tradingDayList.get(leftIndex))) >= 0) {
@@ -54,7 +51,6 @@ public class TradingDayServiceImpl implements TradingDayService {
             leftIndex ++;
         }
 
-        result.sort(LocalDate::compareTo);
         return result;
     }
 
