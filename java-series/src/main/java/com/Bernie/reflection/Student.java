@@ -1,5 +1,6 @@
 package com.Bernie.reflection;
 
+import java.io.Serializable;
 import java.lang.reflect.Field;
 
 /**
@@ -7,7 +8,7 @@ import java.lang.reflect.Field;
  * description: Student类
  * create time: 2020/10/24 16:48
  */
-public class Student {
+public class Student implements Serializable,Cloneable {
     private String name;
     public int age;
 
@@ -45,6 +46,11 @@ public class Student {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    @Override
+    public Student clone() throws CloneNotSupportedException {
+        return (Student) super.clone();
     }
 
     public static void main(String[] args) throws ClassNotFoundException {
