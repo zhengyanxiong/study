@@ -1,6 +1,8 @@
 package com.Bernie.design.factory.abstracts.redis;
 
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -10,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @Date 2020/11/18/018 17:15
  */
 public class IIP {
-    private Logger logger = Logger.getLogger(IIP.class);
+    private Logger logger = LoggerFactory.getLogger(IIP.class);
 
     private Map<String,String> dataMap = new ConcurrentHashMap<>();
 
