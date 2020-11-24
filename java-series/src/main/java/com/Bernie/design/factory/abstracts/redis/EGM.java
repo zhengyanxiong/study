@@ -1,7 +1,9 @@
 package com.Bernie.design.factory.abstracts.redis;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.spi.LoggerFactory;
+
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -11,7 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @Date 2020/11/18/018 17:06
  */
 public class EGM {
-   private Logger logger = Logger.getLogger(EGM.class);
+   private Logger logger = LoggerFactory.getLogger(EGM.class);
 
    private Map<String,String> dataMap = new ConcurrentHashMap<>();
 
