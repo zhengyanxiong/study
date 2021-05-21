@@ -17,4 +17,8 @@ public class Node {
     public void display() {
         System.out.println(data);
     }
+
+    public void show() {
+        System.out.print(data + " ");
+    }
 }

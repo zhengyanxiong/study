@@ -1,5 +1,7 @@
 package com.Bernie.tree;
 
+import java.util.List;
+
 /**
  * create by: Bernie
  * description: TODO
@@ -13,8 +15,11 @@ public interface Tree {
 
     //中序遍历
     public void infixOrder(Node current);
+    public List<Node> infixOrderByStack(Node current);
     //前序遍历
     public void preOrder(Node current);
+    //通过栈实现
+    public List<Node> preOrderByStack(Node current);
     //后序遍历
     public void postOrder(Node current);
 

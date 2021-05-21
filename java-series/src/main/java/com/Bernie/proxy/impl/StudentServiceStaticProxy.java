@@ -19,6 +19,7 @@ public class StudentServiceStaticProxy implements StudentService {
         System.out.println("使用静态代理");
         System.out.println("---------------------------");
         System.out.println("判断是否有权限获取学生信息！");
+        System.out.println("新的处理逻辑");
         Student student = studentService.getStudent();
         System.out.println(student.toString());
         System.out.println("记录获取的学生信息相关操作！");

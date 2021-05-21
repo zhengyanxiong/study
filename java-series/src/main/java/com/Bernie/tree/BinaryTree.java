@@ -1,5 +1,7 @@
 package com.Bernie.tree;
 
+import java.util.*;
+
 /**
  * create by: Bernie
  * description: TODO
@@ -60,6 +62,24 @@ public class BinaryTree implements Tree{
         }
     }
 
+    @Override
+    public List<Node> infixOrderByStack(Node current) {
+        List<Node> res = new ArrayList<>();
+        Deque<Node> stack = new LinkedList<>();
+        while (null != current || !stack.isEmpty()) {
+            while (current != null) {
+                stack.push(current);
+                current = current.leftNode;
+            }
+            Node node = stack.peek();
+            stack.pop();
+            res.add(node);
+            current = node.rightNode;
+        }
+
+        return res;
+    }
+
     // 前序遍历
     // root > preOrder(left) > preOrder(right)
     public void preOrder(Node current) {
@@ -68,6 +88,28 @@ public class BinaryTree implements Tree{
             preOrder(current.leftNode);
             preOrder(current.rightNode);
         }
+    }
+
+    // 前序遍历的栈实现
+    @Override
+    public List<Node> preOrderByStack(Node current) {
+        List<Node> res = new ArrayList<>();
+        Stack<Node> stack = new Stack<>();
+        stack.add(current);
+        while (!stack.isEmpty()) {
+            Node node = stack.peek();
+            stack.pop(); // 出栈
+            res.add(node);
+            if (node.rightNode != null) {
+                stack.push(node.rightNode);
+            }
+
+            if (node.leftNode != null) {
+                stack.push(node.leftNode);
+            }
+        }
+
+        return res;
     }
 
     // 后序遍历
@@ -121,8 +163,23 @@ public class BinaryTree implements Tree{
         System.out.println("中序遍历：");
         binaryTree.infixOrder(binaryTree.rootNode);
         System.out.println("\n-------------------");
-        System.out.println("前序遍历:");
+        System.out.println("中序遍历(栈实现)：");
+        List<Node> res = binaryTree.infixOrderByStack(binaryTree.rootNode);
+        res.forEach(Node::show);
+        binaryTree.infixOrder(binaryTree.rootNode);
+        System.out.println("\n-------------------");
+        System.out.println("中序遍历(自定义迭代器)：");
+        BinaryTreeIterator binaryTreeIterator = new BinaryTreeIterator(binaryTree.rootNode);
+        while (binaryTreeIterator.hasNext()) {
+            System.out.print(binaryTreeIterator.next() + " ");
+        }
+        System.out.println("\n-------------------");
+        System.out.println("前序遍历(递归实现):");
         binaryTree.preOrder(binaryTree.rootNode);
+        System.out.println("\n-------------------");
+        System.out.println("前序遍历(栈实现):");
+        List<Node> preList = binaryTree.preOrderByStack(binaryTree.rootNode);
+        preList.forEach(Node::show);
         System.out.println("\n-------------------");
         System.out.println("后序遍历:");
         binaryTree.postOrder(binaryTree.rootNode);

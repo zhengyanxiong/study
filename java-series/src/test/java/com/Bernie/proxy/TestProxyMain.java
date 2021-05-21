@@ -71,8 +71,5 @@ public class TestProxyMain {
         StudentServiceImpl studentService = new StudentServiceImpl();
         StudentService studentService1 = (StudentService) getProxy(studentService);
         System.out.println(studentService1.getStudent());
-        int f = 3-8;
-        System.out.println(f);
-        System.out.println(3-8);
     }
 }
