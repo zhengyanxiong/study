@@ -11,6 +11,7 @@
     <modules>
         <module>cloud-components</module>
         <module>cloud-platform</module>
+        <module>cloud-service</module>
     </modules>
 
     <properties>
