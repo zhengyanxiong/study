@@ -12,6 +12,7 @@
         <module>LeetcodePractice</module>
         <module>java-series</module>
         <module>springcloud-series</module>
+        <module>springboot-series</module>
     </modules>
 
     <properties>
